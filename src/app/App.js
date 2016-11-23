@@ -8,7 +8,8 @@ import {createStore} from 'redux';
 import {liveDepartureApp} from './reducers/reducer';
 const store = createStore(liveDepartureApp);
 
-const url = process.env.NODE_ENV == "development" ? "http://localhost:3000/api/csv" : "http://stevemu.com:3000/api/csv";
+const host = process.env.NODE_ENV == 'development' ? 'http://localhost:3000/' : 'http://stevemu.com:3000/';
+const url = `${host}api/csv`;
 
 class App extends Component {
 
