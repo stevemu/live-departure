@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+const changeFilter = (filter) => ({
+  type: 'SET_DESTINATION_FILTER',
+  filter
+});
+
 let FilterInput = ({onFilterChange}) => {
   return (
     <input placeholder="Filter by destination" onChange={(e) => onFilterChange(e.target.value)}/>
@@ -10,10 +15,7 @@ let FilterInput = ({onFilterChange}) => {
 const mapDispatchToFilterInputProps = (dispatch, ownProps) => {
   return {
     onFilterChange: (filter) => {
-      dispatch({
-        type: 'SET_DESTINATION_FILTER',
-        filter
-      })
+      dispatch(changeFilter(filter))
     }
   }
 };
