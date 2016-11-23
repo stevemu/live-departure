@@ -17,8 +17,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-
-    const NODE_ENV=process.env.NODE_ENV;
     this.interval = setInterval(this.getNewCSV, 2000);
   }
 
