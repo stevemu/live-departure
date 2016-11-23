@@ -8,7 +8,10 @@ const changeFilter = (filter) => ({
 
 let FilterInput = ({onFilterChange}) => {
   return (
-    <input placeholder="Filter by destination" onChange={(e) => onFilterChange(e.target.value)}/>
+    <input placeholder="Filter by destination"
+           onChange={(e) => onFilterChange(e.target.value)}
+           className="filter-input"
+    />
   )
 };
 
