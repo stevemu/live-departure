@@ -43,7 +43,7 @@ app.use(express.static(path.resolve(__dirname, '../public/')));
 
 app.use(fallback(path.resolve(__dirname, '../public/index.html'))); // when requested route does not exist here in express app, return this file; for react.js route when using history.
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 4000));
 app.listen(app.get('port'), () => {
   console.log('Node app is running on port', app.get('port'));
 });
