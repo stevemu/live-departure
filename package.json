@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/server/index.js",
   "scripts": {
-    "start": "npm run build-prod && npm run server",
+    "start": "npm run server",
     "server": "cross-env PORT=4000 nodemon src/server/index.js",
     "build-prod": "cross-env SERVER_PORT=4000 webpack --config config/webpack.prod.js",
     "dev-server": "cross-env SERVER_PORT=4000 webpack-dev-server --content-base src/public --config config/webpack.dev.js --inline --hot --history-api-fallback",
